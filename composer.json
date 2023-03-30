@@ -6,6 +6,9 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "codeat3/blade-codicons": "^1.31",
+        "codeat3/blade-google-material-design-icons": "^1.18",
+        "codeat3/blade-vaadin-icons": "^1.4",
         "filament/filament": "^2.17",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.0",

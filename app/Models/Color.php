@@ -16,7 +16,7 @@ class Color extends Model
         return $this->belongsTo(Type::class);
     }
 
-    public function vechile()
+    public function vechiles()
     {
         return $this->hasMany(Vechile::class);
     }

@@ -16,9 +16,19 @@ class Type extends Model
         return $this->belongsTo(Brand::class);
     }
 
-    public function vechile()
+    public function vechiles()
     {
         return $this->hasMany(Vechile::class);
+    }
+
+    public function productionyears()
+    {
+        return $this->hasMany(Productionyear::class);
+    }
+
+    public function colors()
+    {
+        return $this->hasMany(Color::class);
     }
 
 }

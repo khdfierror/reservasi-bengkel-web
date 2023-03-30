@@ -29,7 +29,7 @@ class Vechile extends Model
         return $this->belongsTo(Type::class);
     }
 
-    public function productionyear()
+    public function production_year()
     {
         return $this->belongsTo(Productionyear::class);
     }
