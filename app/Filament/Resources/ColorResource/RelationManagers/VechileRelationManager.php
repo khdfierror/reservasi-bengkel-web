@@ -9,6 +9,7 @@ use App\Models\Color;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
 use Filament\Resources\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Resources\Table;
@@ -45,7 +46,7 @@ class VechilesRelationManager extends RelationManager
                         return $brand->types->pluck('name', 'id');
                     })
                     ->reactive()
-                    ->afterStateUpdated(fn (callable $set) => $set('productionyear_id', 'color_id', null)),
+                    ->afterStateUpdated(fn (callable $set) => $set('productionyear_id', null)),
 
                 Select::make('productionyear_id')
                     ->label('Tahun Produksi')
@@ -73,7 +74,7 @@ class VechilesRelationManager extends RelationManager
 
                 TextInput::make('police_num')->required()->maxLength(255),
                 TextInput::make('chassis_num')->required()->maxLength(255),
-                TextInput::make('expiry_date_stnk')->required(),
+                DatePicker::make('expiry_date_stnk')->required(),
             ]);
     }
 
