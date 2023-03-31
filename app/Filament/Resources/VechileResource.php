@@ -55,7 +55,7 @@ class VechileResource extends Resource
 
                             })
                             ->reactive()
-                            ->afterStateUpdated(fn (callable$set) => $set('productionyear_id', null)),
+                            ->afterStateUpdated(fn (callable $set) => $set('productionyear_id', null)),
 
                         Select::make('productionyear_id')
                             ->label('Tahun Produksi')
@@ -94,10 +94,10 @@ class VechileResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id')->sortable(),
-                TextColumn::make('brand_id')->label('model')->sortable()->searchable(),
-                TextColumn::make('type_id')->label('tipe')->sortable()->searchable(),
-                TextColumn::make('productionyear_id')->label('tahun produksi')->sortable()->searchable(),
-                TextColumn::make('color_id')->label('warna')->sortable()->searchable(),
+                TextColumn::make('brand.name')->label('model')->sortable()->searchable(),
+                TextColumn::make('type.name')->label('tipe')->sortable()->searchable(),
+                TextColumn::make('productionyear.name')->label('tahun produksi')->sortable()->searchable(),
+                TextColumn::make('color.name')->label('warna')->sortable()->searchable(),
                 TextColumn::make('police_num')->sortable(),
                 TextColumn::make('chassis_num')->sortable(),
                 TextColumn::make('expiry_date_stnk')->date(),

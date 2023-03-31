@@ -82,13 +82,13 @@ class VechilesRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                TextColumn::make('id')->sortable(),
-                TextColumn::make('type_id')->sortable(),
-                TextColumn::make('productionyear_id')->sortable()->searchable(),
-                TextColumn::make('color_id')->sortable()->searchable(),
-                TextColumn::make('police_num'),
-                TextColumn::make('chassis_num'),
-                TextColumn::make('expiry_date_stnk')->date(),
+            TextColumn::make('id')->sortable(),
+            TextColumn::make('type.name')->label('Tipe')->sortable(),
+            TextColumn::make('productionyear.name')->label('Tahun Produksi')->sortable()->searchable(),
+            TextColumn::make('color.name')->label('Warna')->sortable()->searchable(),
+            TextColumn::make('police_num')->label('No Polisi'),
+            TextColumn::make('chassis_num')->label('No Rangka'),
+            TextColumn::make('expiry_date_stnk')->label('Masa Berlaku Stnk')->date(),
             ])
             ->filters([
                 //

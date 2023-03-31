@@ -12,7 +12,7 @@ class Vechile extends Model
     protected $fillable = [
         'brand_id',
         'type_id',
-        'production_year_id',
+        'productionyear_id',
         'color_id',
         'police_num',
         'chassis_num',
@@ -29,7 +29,7 @@ class Vechile extends Model
         return $this->belongsTo(Type::class);
     }
 
-    public function production_year()
+    public function productionyear()
     {
         return $this->belongsTo(Productionyear::class);
     }

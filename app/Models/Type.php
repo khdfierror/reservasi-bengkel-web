@@ -21,7 +21,7 @@ class Type extends Model
         return $this->hasMany(Vechile::class);
     }
 
-    public function productionyears()
+    public function productionyears()   
     {
         return $this->hasMany(Productionyear::class);
     }
