@@ -23,7 +23,12 @@ class ServiceResource extends Resource
     protected static ?string $model = Service::class;
 
     protected static ?string $navigationIcon = 'eos-service';
+
     protected static ?string $navigationLabel = 'Layanan';
+
+    protected static ?string $navigationGroup = 'Service Management';
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {

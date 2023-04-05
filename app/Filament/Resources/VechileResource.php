@@ -28,7 +28,12 @@ class VechileResource extends Resource
     protected static ?string $model = Vechile::class;
 
     protected static ?string $navigationIcon = 'vaadin-car';
+
     protected static ?string $navigationLabel = 'Kendaraan';
+
+    protected static ?string $navigationGroup = 'Service Management';
+
+    protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
     {
